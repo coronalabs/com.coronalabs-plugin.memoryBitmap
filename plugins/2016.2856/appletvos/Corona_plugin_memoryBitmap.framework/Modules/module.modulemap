@@ -1,0 +1,6 @@
+framework module Corona_plugin_memoryBitmap {
+  umbrella header "Corona_plugin_memoryBitmap.h"
+
+  export *
+  module * { export * }
+}
