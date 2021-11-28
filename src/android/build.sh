@@ -51,7 +51,7 @@ else
 	FLAGS=""
 fi
 
-CFLAGS=
+CFLAGS=" --exclude-libs libgcc_real.a "
 
 if [ "$OPTIM_FLAGS" = "debug" ]
 then
