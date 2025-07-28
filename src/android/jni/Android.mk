@@ -10,8 +10,6 @@ CORONA_ROOT := $(CORONA_ENTERPRISE)/Corona
 LUA_API_DIR := $(CORONA_ROOT)/shared/include/lua
 LUA_API_CORONA := $(CORONA_ROOT)/shared/include/Corona
 
-LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
-LOCAL_LDFLAGS += "-Wl,-z,common-page-size=16384"
 
 PLUGIN_DIR := ../..
 
@@ -49,6 +47,9 @@ LOCAL_CFLAGS := \
 	-DRtt_ANDROID_ENV
 
 LOCAL_LDLIBS := -llog
+
+LOCAL_LDFLAGS += "-Wl,-z,max-page-size=16384"
+LOCAL_LDFLAGS += "-Wl,-z,common-page-size=16384"
 
 LOCAL_SHARED_LIBRARIES := \
 	liblua libcorona
